@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WBIP Viewer</title>
+</head>
+<body>
+
+<canvas id="viewer"></canvas>
+
+<script src="1/wbip.js"></script>
+
+<script>
+
+async function main() {
+
+    wbip.pass("1234567890");
+
+    const canvas =
+        document.getElementById(
+            "viewer"
+        );
+
+    await wbip.render(
+        "1/waspberry-wbip.wbip",
+        canvas,
+        {
+            width: 500,
+            height: 500,
+            preserveAspectRatio: true,
+            smoothing: false
+        }
+    );
+}
+
+main();
+
+</script>
+
+</body>
+</html>
