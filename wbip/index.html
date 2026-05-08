@@ -8,7 +8,8 @@
 <canvas id="viewer" width="2000"
         height="2000"
         style="width:500px;height:500px"></canvas>
-
+<h1>getMessage()</h1>
+    <p>WBIP supports messages in an image file. For this example, the message is <strong id="message"></strong></p>
 <script src="1/wbip.js"></script>
 
 <script>
@@ -35,7 +36,16 @@ async function main() {
 }
 
 main();
+wbip.pass("1234567890");
 
+wbip.getMessage("1/waspberry-wbip.wbip")
+    .then(message => {
+        console.log(message);
+        document.getElementById("message").innerText = message;
+    })
+    .catch(err => {
+        console.error(err);
+    });
 </script>
 
 </body>
