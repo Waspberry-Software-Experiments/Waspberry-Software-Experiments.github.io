@@ -13,9 +13,9 @@
 (async () => {
     const canvas = document.getElementById("canvas");
 
-    await wbif.render("https://wfr5qp-5000.csb.app/waspberry-new.wbif", canvas);
+    await wbif.render("waspberry-new.wbif", canvas);
 
-    const msg = await wbif.getMessage("https://wfr5qp-5000.csb.app/waspberry-new.wbif");
+    const msg = await wbif.getMessage("waspberry-new.wbif");
 
     console.log("Message:", msg);
 })();
