@@ -1,0 +1,12 @@
+Waspberry Image Format Docs
+
+  Latest version (recommended):
+
+  wbif.render("image.wbif", canvas, {
+    width: 800,
+    height: 600
+});
+
+Convert using wbimage.py as for previous versions.
+
+  
